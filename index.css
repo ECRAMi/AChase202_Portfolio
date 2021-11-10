@@ -66,6 +66,8 @@ header {
     margin: 0 auto;
     text-align: center;
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: fit-content;
     grid-gap: 20px;
@@ -77,4 +79,22 @@ header {
 
 .works>div {
     border-bottom: 1px solid white;
+}
+
+.meIMG {
+    grid-column: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto
+}
+
+.works>* {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 10px;
 }
