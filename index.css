@@ -71,6 +71,7 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: fit-content;
     grid-gap: 20px;
+    grid-row-gap: 100px;
 }
 
 .works div * {
@@ -79,6 +80,7 @@ header {
 
 .works>div {
     border-bottom: 1px solid white;
+    margin: 0 auto;
 }
 
 .meIMG {
@@ -93,8 +95,32 @@ header {
 .works>* {
     width: 100px;
     height: 100px;
-    overflow: hidden;
     border-radius: 50%;
     border: 1px solid white;
     padding: 10px;
+}
+
+.works a {
+    position: relative;
+    top: 13vh;
+}
+
+.logo {
+    background-image: url(imgs/logo.png);
+    background-color: white;
+    background-size: 135%;
+    background-repeat: no-repeat;
+}
+
+.RPS {
+    background-image: url(imgs/RPS.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.TTT {
+    background-image: url(imgs/TTT.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    grid-column: 1 / span 2; 
 }
