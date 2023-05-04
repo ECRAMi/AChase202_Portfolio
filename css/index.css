@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, h1 {
+    color: white;
+}
+
+p {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    /* background-image: radial-gradient(rgba(255, 0, 0, 0.1), rgba(0, 255, 0, 0.1)); */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.noClick {
+    pointer-events: none;
+}
+
+.noClick * {
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Main Menu Pack opening */
+
+.mainHeader {
+    position: fixed;
+    top: 7vh;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.mainContent {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    align-content: center;
+}
+
+.mainPack {
+    height: 45vh;
+    width: 35vh;
+    background-color: rgb(0, 134, 53);
+    border: 0.5vh solid white;
+    border-radius: 2vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    position: relative;
+}
+
+#AChasePic {
+    z-index: 1;
+    height: 30vh;
+    border-radius: 5vh;
+}
+
+.packStringsX {
+    position: absolute;
+    z-index: 0;
+    background-color: transparent;
+    border: 1vh solid rgba(0, 0, 0, 0.7);
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    height: 4vh;
+}
+
+.packStringsY {
+    position: absolute;
+    z-index: 0;
+    background-color: transparent;
+    border: 1vh solid rgba(0, 0, 0, 0.7);
+    border-top: none;
+    border-bottom: none;
+    width: 4vh;
+    height: 100%;
+}
+
+.flash {
+    position: fixed;
+    height: 0vh;
+    width: 0vw;
+    border-radius: 100%;
+    z-index: 100;
+    animation: flashFadeInOut paused 4s;
+    animation-timing-function: ease-in-out;
+    animation-direction:alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-image: radial-gradient(rgb(255, 255, 117, 1) 50%, rgba(255, 255, 255, 1), transparent);
+    pointer-events: unset;
+}
+
+
+
+/* Info Cards */
+
+.card {
+    height: 45vh;
+    width: 35vh;
+    background-color: rgb(84, 243, 5);
+    border: 0.5vh solid white;
+    border-radius: 3vh;
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 1vh;
+    padding: 2vh;
+    position: relative;
+    animation: fadeout 2s ease-in-out forwards;
+    animation-play-state: paused;
+}
+
+.cardTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 15%;
+    background-color: aqua;
+    border: 0.5vh solid black;
+    padding: 2vh;
+    border-radius: 2vh;
+}
+
+.cardImg {
+    width: 20vh;
+    height: 20vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+.cardBody {
+    width: 90%;
+    text-align: center;
+    border: 0.5vh dashed black;
+    padding: 1vh;
+}
+
+.card:hover {
+    width: 37.5vh;
+    height: 50vh;
+}
+
+.card * {
+    color: black;
+}
+
+
+
+
+
+/* Info blocks */
+
+.iblock {
+    background-color: rgb(63, 255, 191);
+    border-radius: 20vh;
+    padding: 5vh 10vh;
+    width: 75vw;
+    height: 75vh;
+    position: absolute;
+    display: flex;
+    /* opacity: 0; */
+    flex-direction: column;
+    /* animation: 0.5s ease-in-out forwards;
+    animation-name: fadein;
+    animation-play-state: paused; */
+    gap: 1.5vh;
+}
+
+.iblock * {
+    color: black;
+}
+
+.iblock>h1 {
+    text-align: center;
+    margin-bottom: 1vh;
+    font-size: 300%;
+}
+
+.iblock>p, .extrainfo>p {
+    font-size: 140%;
+    text-indent: 4vh;
+}
+
+.back {
+    position: absolute;
+    bottom: 5vh;
+    align-self: center;
+    width: 10%;
+    height: 5%;
+}
+
+#experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    grid-template-areas: 
+    "span2 span2"
+    "exp edu"
+    "skills edu"
+    "extra extra"
+    "extra extra";
+    gap: 3vh;
+    overflow-y: auto;
+}
+
+.span2 {
+    grid-area: span2;
+    grid-column: span 2;
+    text-align: center;
+}
+
+.skills {
+    grid-area: skills;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    grid-template-areas: 
+    "span2 span2"
+    "ul ul";
+    justify-content: center;
+    height: max-content;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+.education {
+    grid-area: edu;
+}
+
+.experience {
+    grid-area: exp;
+    text-align: center;
+}
+
+.extrainfo {
+    grid-area: extra;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.extrainfo>h4 {
+    text-align: center;
+    font-size: 200%;
+    grid-column: span 2;
+}
+
+.extrainfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.faded {
+    color: rgb(126, 126, 126)
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/* Keyframes and Media */
+
+@keyframes flashFadeInOut {
+    0% {
+        opacity: 0;
+        width: 0vw;
+        height: 0vh;
+    }
+
+    100% {
+        opacity: 1;
+        width: 200vw;
+        height: 200vh;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .mainContent {
+        flex-direction: column;
+    }
+    
+    .card {
+        top: 40vh;
+    }
+
+    p {
+        font-size: 125%;
+    }
+
+    h1 {
+        font-size: 175%;
+    }
+}

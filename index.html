@@ -1,55 +1,148 @@
 <!DOCTYPE html>
     <head>
-        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="shortcut icon" href="https://www.prequeladventure.com/this/favicon.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="js/index.js"></script>
         <title>Aryon Chase's Portfolio</title>
     </head>
     <body>
-        <header>
-            <h1>Aryon Chase's</h1>
-            <h3>Portfolio</h3>
-            <nav class="headNav">
-                <a href="index.html">Home</a>
-                <a href="resume.html">Resume</a>
-                <a href="works.html">Works</a>
-            </nav>
+        <header class="mainHeader">
+            <h1>Aryon Chase's Portfolio</h1>
+            <p id="directions">Click below to "unpack" my portfolio cards</p>
         </header>
-        <section class="content">
-            <div class="meIMG">
-                <img src="imgs/ME.png">
+        <section class="mainContent">
+            <!-- <div class="flash noClick hidden"></div>
+            <div class="mainPack"> 
+                <img id="AChasePic" class="packOpen noClick" src="imgs/Aryon.png">
+                <div class="packStringsX packOpen noClick"></div>
+                <div class="packStringsY packOpen noClick"></div>
             </div>
-            <div class="aboutMe">
-                <h2>About Me</h2>
-                <p class="indent">Hi, my name is Aryon, I’ve always wanted to code programs of my own since I was a kid. I have been taking many steps to my goal of a career in programming of pretty much any sort. From websites to programs, I want to learn it all and I have been working hard to do that. I’ve taken several classes in the realm of coding, such as: Video Game design (Hempfield High School 11th Grade), Interactive Media and Web Design (Lancaster County Career and Technical Center), and currently Computer Software Engineering Technology (Thaddeus Stevens College).</p>
-                <p class="indent">As for who I am and my personality, I take my work very seriously and complete work on time. I try to help out with extra work often, especially if I’m all caught up with my own work. I view myself as a friendly person with an outgoing personality. When it comes to dealing with customers, I am able to speak clearly to them and complete their request with ease. I tend to keep solutions and designs simple when completing projects or tasks.</p>
+            <div class="card info">
+                <div class="cardTitle">
+                    <h1>Who am I</h1>
+                </div>
+                <img class="cardImg" src="imgs/questionMark.png">
+                <div class="cardBody">
+                    <p>Displays information and details about me</p>
+                </div>
             </div>
-            <!-- <div class="inspirations">
-                <h2>Inspirations</h2>
-                <ul>
-                    <li>Nintendo</li>
-                    <ul>
-                        <li>Super Smash Bros. series</li>
-                        <li>Super Mario Bros. series</li>
-                        <li>Metroid series</li>
-                    </ul>
-                    <li>Activision</li>
-                    <ul>
-                        <li>Call of Duty series</li>
-                    </ul>
-                    <li>Mojang</li>
-                    <ul>
-                        <li>Minecraft</li>
-                    </ul>
-                    <li>DeadPan Games</li>
-                    <ul>
-                        <li>Caveblazers</li>
-                    </ul>
-                    <li>Dodge Roll</li>
-                    <ul>
-                        <li>Enter the Gungeon series</li>
-                    </ul>
-                </ul>
+            <div class="card experience">
+                <div class="cardTitle">
+                    <h1>Past Experience</h1>
+                </div>
+                <img class="cardImg" src="imgs/Experience.jpg">
+                <div class="cardBody">
+                    <p>Shows the list of places I've gained experience from (School, work, etc)</p>
+                </div>
+            </div>
+            <div class="card works">
+                <div class="noClick cardTitle">
+                    <h1>Previous Works</h1>
+                </div>
+                <img class="noClick cardImg" src="imgs/TTT.png">
+                <div class="noClick cardBody">
+                    <p>Allows you to view previously made works/programs</p>
+                </div>
             </div> -->
+            <!-- <div class="iblock" id="aboutMe">
+                <h1>About me</h1>
+                <p>Hello, my name is Aryon Chase. I'm an aspiring developer hoping to bring my skills to more program development.</p> 
+                <p>I pride myself in completing tasks alongside helping other with their own tasks and struggles. I'm often told I'm skilled at error fixing and suggesting better solutions.</p>
+                <p>I have experience in many different languages including the basic html, css, and javascript/jquery as well as the more complex languages, php, python, and a little bit of flutter.</p>
+                <p>I've learned from several locations, them being Video Game design (Hempfield High School 11th Grade), Interactive Media and Web Design (Lancaster County Career and Technical Center), and Computer Software Engineering Technology (Thaddeus Stevens College)</p>
+                <p>I'm always friendly towards anyone, customer or not, and like making people smile so as their day is just a bit better.</p>
+                <p>My primary interest lies in video game programming but I also want to learn sound and art design at some point to possible design programs of my own from complete scratch and without online resources.</p>
+                <p>Thats a summary of me and my interests, I hope you learned something interesting about me and what I do.</p>
+                <button class="back">BACK</button>
+            </div> -->
+
+            <!-- <div class="iblock" id="experience">
+                <h1 class="span2">My Experience</h1>
+                <div class="education">
+                    <h2>Education</h2>
+                    <div>
+                        <div id="TSEDU">
+                            <p class="faded">JANUARY 2021 - MAY 2023</p>
+                            <p class="bold">Thaddeus Stevens College. 750 E King St, Lancaster, PA</p>
+                            <p>Graduated with an average GPA of 3.9</p>
+                            <p>Subject of study: Computer Software Engineering</p>
+                        </div>
+                        <div id="LCCTCEDU">
+                            <p class="faded">SEPTEMBER 2019 - JUNE 2020</p>
+                            <p class="bold">Brownstown LCCTC. 231 Snyder Rd, Ephrata, PA<span class="endLine"> - Certification</span></p>
+                            <p>Graduated with an average GPA of 3.9</p>
+                            <p>Subject of study: Interactive Media & Web Design</p>
+                        </div>
+                        <div id="LCCTCEDU">
+                            <p class="faded">SEPTEMBER 2016 - JUNE 2020</p>
+                            <p class="bold">Warwick High School. 301 W Orange St, Lititz, PA<span class="endLine"> - High School Diploma</span></p>
+                            <p>Graduated with an average GPA of 3.3</p>
+                        </div>
+                        <div id="LCCTCEDU">
+                            <p class="faded">SEPTEMBER 2018 - JUNE 2019</p>
+                            <p class="bold">Hempfield High School. 200 Stanley Ave, Landisville, PA</p>
+                            <p>Ended the year with an average GPA of 3.5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <h2>Work Experience</h2>
+                    <div>
+                        <p class="faded">APRIL 2019 - PRESENT</p>
+                        <p class="bold">Riptide Carwash, 1056 Lititz Pike, Lititz, PA <span class="endLine"> - Shift Leader</span></span></p>
+                        <ul>
+                            <li>Ability to handle all maintenance and small repairs.</li>
+                            <li>Ability to handle daily checklist procedures.</li>
+                            <li>Ability to communicate to Customers and employees.</li>
+                            <li>Ensure that the facility is always kept clean and organized.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h3 class="span2">Skills</h3>
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Critical Thinking</li>
+                        <li>Flexibility</li>
+                        <li>Communication</li>
+                    </ul>
+                    <ul>
+                        <li>Teamwork</li>
+                        <li>Organization</li>
+                        <li>Customer Service</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+                <div class="extrainfo">
+                    <h4>Languanges learned</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>css</li>
+                        <li>javascript/jquery</li>
+                    </ul>
+                    <ul>
+                        <li>php</li>
+                        <li>python</li>
+                        <li>flutter</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="back">BACK</button> -->
+
+            <div class="iblock" id="works">
+                <h1 class="span2">My Works</h1>
+                <div class="workList">
+                    <div class="RPS">
+                        <a target="_blank" href="https://ecrami.github.io/RPS_Project/">RPS Game</a>
+                    </div>
+                    <div class="TTT">   
+                        <a target="_blank" href="https://ecrami.github.io/TTT_Exercise/">Tic-Tac-Toe Game</a>
+                    </div>
+                </div>
+            </div>
+            <button class="back">BACK</button>
         </section>
     </body>
 </html>
