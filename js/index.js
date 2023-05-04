@@ -135,10 +135,24 @@ $(document).ready(function(){
             
             $(".mainContent").append(
                 '<div class="iblock" id="works">' +
-                    '<h1>My Works</h1>' +
+                '<h1 class="span2">My Works</h1>' +
+                '<div class="workList">' +
+                    '<div class="Fumi">' +
+                        '' +
+                        '<a target="_blank" href="https://ecrami.github.io/KnuckleBones/"><img src="imgs/CotL.png" class="roundImg">Cult of the Lamb<br>KnuckleBones recreation</a>' +
+                    '</div>' +
+                    '<div class="RPS">' +
+                        '' +
+                        '<a target="_blank" href="https://ecrami.github.io/RPS_Project/"><img src="imgs/RPS.png" class="roundImg">RPS Game</a>' +
+                    '</div>' +
+                    '<div class="TTT">' +
+                        '' +
+                        '<a target="_blank" href="https://ecrami.github.io/TTT_Exercise/"><img src="imgs/TTT.png" class="roundImg">Tic-Tac-Toe Game</a>' +
+                    '</div>  ' +
                 '</div>' +
-                '<button class="back">BACK</button>'
-            );
+                '<p class="faded">**No images are owned by me and are for markers only</p>' +
+            '</div>' +
+            '<button class="back">BACK</button>');
             
         }
         $(".iblock").css("animation-play-state", "running");
